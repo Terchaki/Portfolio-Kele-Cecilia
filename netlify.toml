@@ -1,8 +1,9 @@
-# Netlify configuration for Angular SPA
+# Netlify configuration for Angular SPA Portfolio
 
 [build]
+  base = "portfolio-kele"
   command = "npm run build"
-  publish = "dist/portfolio-kele/browser"
+  publish = "portfolio-kele/dist/portfolio-kele/browser"
 
 # Redirect all requests to index.html for SPA routing
 [[redirects]]
