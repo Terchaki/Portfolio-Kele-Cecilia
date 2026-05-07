@@ -1,0 +1,11 @@
+# Netlify configuration for Angular SPA
+
+[build]
+  command = "npm run build"
+  publish = "dist/portfolio-kele/browser"
+
+# Redirect all requests to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

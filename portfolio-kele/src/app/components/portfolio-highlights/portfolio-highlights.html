@@ -1,0 +1,8 @@
+<section class="metrics-grid">
+  @for (item of items; track item.title) {
+    <article class="panel metric-card">
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </article>
+  }
+</section>

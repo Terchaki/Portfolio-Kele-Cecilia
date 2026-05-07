@@ -1,0 +1,16 @@
+<section class="learning" id="formacao">
+  <div class="section-heading">
+    <span class="section-label">Cursos e certificações</span>
+    <h2>Blocos visuais para destacar aprendizado contínuo.</h2>
+  </div>
+
+  <div class="learning__grid">
+    @for (item of items; track item.title) {
+      <article class="panel learning-card">
+        <span>{{ item.provider }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.note }}</p>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,86 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.portfolio-shell {
+  --bg: #f6efe7;
+  --bg-elevated: rgba(255, 252, 248, 0.72);
+  --panel-border: rgba(71, 54, 39, 0.12);
+  --text: #1f1b18;
+  --muted: #65574a;
+  --accent: #cb5b3e;
+  --accent-strong: #7d2618;
+  --accent-soft: rgba(203, 91, 62, 0.14);
+  --shadow: 0 28px 70px rgba(84, 55, 34, 0.12);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 24px 24px 0 24px;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 28%),
+    linear-gradient(180deg, #fffaf5 0%, var(--bg) 100%);
+}
+
+.portfolio-shell--spotlight {
+  --bg: #091420;
+  --bg-elevated: rgba(8, 20, 32, 0.72);
+  --panel-border: rgba(139, 201, 255, 0.16);
+  --text: #eef7ff;
+  --muted: #a5bfd4;
+  --accent: #5ad1b2;
+  --accent-strong: #dffef5;
+  --accent-soft: rgba(90, 209, 178, 0.16);
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  background:
+    radial-gradient(circle at top left, rgba(90, 209, 178, 0.18), transparent 24%),
+    linear-gradient(180deg, #07111c 0%, #102537 100%);
+}
+
+.backdrop {
+  position: absolute;
+  inset: auto;
+  border-radius: 999px;
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+.backdrop--one {
+  top: 100px;
+  right: -120px;
+  width: 340px;
+  height: 340px;
+  background: rgba(255, 181, 148, 0.25);
+}
+
+.backdrop--two {
+  left: -80px;
+  bottom: 180px;
+  width: 260px;
+  height: 260px;
+  background: rgba(113, 187, 255, 0.14);
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.page {
+  display: grid;
+  gap: 24px;
+  padding-top: 116px;
+}
+
+@media (max-width: 720px) {
+  .portfolio-shell {
+    padding: 18px 18px 0 18px;
+  }
+
+  .page {
+    padding-top: 116px;
+  }
+}

@@ -1,0 +1,58 @@
+<section class="hero panel">
+  <div class="hero__content">
+    <span class="eyebrow">SDR | BDR | Desenvolvimento de negócios</span>
+
+    @if(!isMobile) {
+    <h1>Kele Cecilia</h1>
+    }
+
+    @if(isMobile) {
+    <div class="tex-center" [style.maxWidth.px]="300" style="margin: 24px auto;">
+      <ng-container *ngTemplateOutlet="brandTemplate"></ng-container>
+    </div>
+    }
+
+    <p class="hero__lead">
+      Profissional de pré-vendas com foco em prospecção consultiva, qualificação de
+      oportunidades e construção de relacionamentos que fortalecem o topo do funil.
+    </p>
+
+    <div class="hero__chips" aria-label="Especialidades principais">
+      <span>Outbound</span>
+      <span>Lead qualification</span>
+      <span>CRM e cadência</span>
+      <span>Handoff comercial</span>
+    </div>
+
+    <div class="hero__actions">
+      <a class="button button--primary" href="#contato">Entrar em contato</a>
+      <a class="button button--ghost" href="https://br.linkedin.com/in/kele-cecilia?trk=public_post_feed-actor-name"
+        target="_blank" rel="noreferrer">
+        Ver LinkedIn
+      </a>
+    </div>
+
+    <p class="hero__note">
+      Estrutura pensada para destacar trajetória, diferenciais, cursos e resultados com visual moderno e leitura rápida.
+    </p>
+  </div>
+
+  @if(!isMobile) {
+  <ng-container *ngTemplateOutlet="brandTemplate"></ng-container>
+  }
+</section>
+
+<ng-template #brandTemplate>
+  <aside class="portrait-card" aria-label="Espaço para foto profissional">
+    <div class="portrait-card__frame">
+      <div class="portrait-card__image">
+        <img src="images/photo-profile-home.png" alt="Foto profissional de Kele Cecilia" />
+      </div>
+    </div>
+
+    <div class="portrait-card__details">
+      <strong>Kele Cecilia</strong>
+      <p>Perfil comercial com comunicação objetiva, escuta ativa e disciplina de execução.</p>
+    </div>
+  </aside>
+</ng-template>

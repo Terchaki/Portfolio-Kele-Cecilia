@@ -1,0 +1,16 @@
+<section class="timeline" id="experiencias">
+  <div class="section-heading">
+    <span class="section-label">Experiências</span>
+    <h2>Estrutura pronta para apresentar trajetória e maturidade comercial.</h2>
+  </div>
+
+  <div class="timeline__items">
+    @for (item of items; track item.title) {
+      <article class="panel timeline-card">
+        <span class="timeline-card__context">{{ item.context }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+    }
+  </div>
+</section>

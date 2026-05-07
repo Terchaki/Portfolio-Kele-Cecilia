@@ -1,0 +1,23 @@
+<section class="contact panel" id="contato">
+  <div class="contact__intro">
+    <span class="section-label">Contato</span>
+    <h2>Canal aberto para networking, oportunidades e parcerias.</h2>
+    <p>
+      Os links abaixo podem ser mantidos como estão ou substituídos pelos contatos finais da Kele.
+    </p>
+  </div>
+
+  <div class="contact__list">
+    @for (item of items; track item.label) {
+      <a
+        class="contact__item"
+        [href]="item.href"
+        [attr.target]="item.label === 'LinkedIn' ? '_blank' : null"
+        [attr.rel]="item.label === 'LinkedIn' ? 'noreferrer' : null"
+      >
+        <span>{{ item.label }}</span>
+        <strong>{{ item.value }}</strong>
+      </a>
+    }
+  </div>
+</section>
