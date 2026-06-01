@@ -16,6 +16,9 @@ export type LearningItem = {
   title: string;
   provider: string;
   note: string;
+  issuedAt?: string;
+  expiresAt?: string;
+  credentialUrl?: string;
 };
 
 export type ContactItem = {

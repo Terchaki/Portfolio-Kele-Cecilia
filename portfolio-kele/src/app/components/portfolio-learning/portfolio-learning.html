@@ -6,11 +6,28 @@
 
   <div class="learning__grid">
     @for (item of items; track item.title) {
-      <article class="panel learning-card">
-        <span>{{ item.provider }}</span>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.note }}</p>
-      </article>
+    <article class="panel learning-card">
+      <span>{{ item.provider }}</span>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.note }}</p>
+
+      @if (item.issuedAt || item.expiresAt) {
+      <div class="learning-card__meta">
+        @if (item.issuedAt) {
+        <small>Emitido em {{ item.issuedAt }}</small>
+        }
+        @if (item.expiresAt) {
+        <small>Validade ate {{ item.expiresAt }}</small>
+        }
+      </div>
+      }
+
+      <!-- @if (item.credentialUrl) {
+          <a class="learning-card__link" [href]="item.credentialUrl" target="_blank" rel="noopener noreferrer">
+            Ver certificado
+          </a>
+        } -->
+    </article>
     }
   </div>
 </section>

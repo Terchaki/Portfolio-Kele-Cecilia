@@ -42,23 +42,31 @@ export const portfolioJourney: JourneyItem[] = [
 
 export const portfolioLearning: LearningItem[] = [
   {
-    title: 'Atendimento, relacionamento e experiência do cliente',
-    provider: 'Espaço para curso ou certificação',
-    note: 'Use este bloco para reforçar postura consultiva, empatia e resolução de demandas.',
+    title: 'Customer Success: Como Conquistar e Manter Clientes',
+    provider: 'Sebrae',
+    note: 'Certificacao voltada para estrategias de fidelizacao, relacionamento e retencao de clientes ao longo da jornada.',
+    issuedAt: 'Mai 2026',
+    expiresAt: 'Mai 2036',
+    credentialUrl:
+      'https://www.linkedin.com/in/kele-cecilia/overlay/Certifications/2050186004/treasury/?profileId=ACoAACRDnGoB2f4y5KJRxtzuCfKheERUS0UwphM&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BcT2Q4LVgS5akG1UdwjNOjg%3D%3D',
   },
   {
-    title: 'Pré-vendas, outbound e social selling',
-    provider: 'Espaço para curso ou certificação',
-    note: 'Ideal para mostrar domínio de cadências, personalização e geração de oportunidades.',
+    title: 'Customer Success',
+    provider: 'Sebrae',
+    note: 'Formacao com foco em experiencia do cliente, acompanhamento de resultados e consolidacao de relacionamento de longo prazo.',
+    issuedAt: 'Mai 2026',
+    expiresAt: 'Mai 2036',
+    credentialUrl:
+      'https://www.linkedin.com/in/kele-cecilia/overlay/Certifications/2047740690/treasury/?profileId=ACoAACRDnGoB2f4y5KJRxtzuCfKheERUS0UwphM',
   },
   {
-    title: 'CRM e gestão de pipeline',
-    provider: 'Espaço para curso ou certificação',
+    title: 'CRM e gestao de pipeline',
+    provider: 'Capacitacao complementar',
     note: 'Inclua ferramentas e metodologias já utilizadas para manter organização e previsibilidade.',
   },
   {
-    title: 'Comunicação, negociação e objeções',
-    provider: 'Espaço para curso ou certificação',
+    title: 'Comunicacao, negociacao e objecoes',
+    provider: 'Capacitacao complementar',
     note: 'Pode destacar treinamentos em rapport, discovery, condução de conversas e fechamento.',
   },
 ];

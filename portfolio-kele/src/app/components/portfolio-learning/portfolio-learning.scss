@@ -38,6 +38,8 @@
 }
 
 .learning-card {
+  display: flex;
+  flex-direction: column;
   min-height: 220px;
   padding: 28px;
 }
@@ -49,8 +51,48 @@
 }
 
 .learning-card p {
+  margin: 0;
   line-height: 1.7;
   color: var(--muted);
+}
+
+.learning-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.learning-card__meta small {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--panel-border));
+  color: var(--muted);
+  background: color-mix(in srgb, var(--accent-soft) 48%, transparent);
+}
+
+.learning-card__link {
+  display: inline-flex;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--panel-border));
+  color: var(--accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.learning-card__link:hover {
+  border-color: color-mix(in srgb, var(--accent) 44%, var(--panel-border));
+  background: color-mix(in srgb, var(--accent-soft) 60%, transparent);
 }
 
 @media (max-width: 1080px) {
