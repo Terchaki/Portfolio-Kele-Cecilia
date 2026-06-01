@@ -3,10 +3,11 @@
 }
 
 .portfolio-footer {
-  width: min(1180px, 100%);
-  margin: 8px auto 0;
-  padding: 14px 18px 18px;
+  width: 100vw;
+  margin: 8px calc(50% - 50vw) 0;
+  padding: 14px 24px 18px;
   text-align: center;
+  margin-top: 50px;
   border-top: 1px solid var(--panel-border);
 }
 
@@ -24,4 +25,10 @@
 
 .portfolio-footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .portfolio-footer {
+    padding: 14px 18px 18px;
+  }
 }

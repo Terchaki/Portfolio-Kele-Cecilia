@@ -31,15 +31,41 @@
 
 .panel {
   border: 1px solid var(--panel-border);
-  border-radius: 32px;
+  border-radius: 12px;
   background: var(--bg-elevated);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
 
 .timeline-card {
+  position: relative;
   min-height: 220px;
   padding: 28px;
+}
+
+.timeline-card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--panel-border));
+  background: color-mix(in srgb, var(--accent-soft) 86%, transparent);
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-card--current {
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--panel-border));
+  background:
+    linear-gradient(165deg, color-mix(in srgb, var(--accent-soft) 56%, transparent), transparent),
+    var(--bg-elevated);
 }
 
 .timeline-card h3 {

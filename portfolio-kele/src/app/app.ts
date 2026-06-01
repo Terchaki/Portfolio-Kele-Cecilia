@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { portfolioContacts, portfolioHighlights, portfolioJourney, portfolioLearning } from './portfolio.data';
 import { PortfolioContactComponent } from './components/portfolio-contact/portfolio-contact';
 import { PortfolioExperienceComponent } from './components/portfolio-experience/portfolio-experience';
@@ -27,6 +27,7 @@ import { Theme } from './portfolio.models';
 })
 export class App {
   protected readonly currentTheme = signal<Theme>('light');
+  protected readonly showScrollTop = signal(false);
 
   protected readonly highlights = portfolioHighlights;
   protected readonly journey = portfolioJourney;
@@ -35,5 +36,14 @@ export class App {
 
   protected setTheme(theme: Theme): void {
     this.currentTheme.set(theme);
+  }
+
+  @HostListener('window:scroll')
+  protected onWindowScroll(): void {
+    this.showScrollTop.set(window.scrollY > 420);
+  }
+
+  protected scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

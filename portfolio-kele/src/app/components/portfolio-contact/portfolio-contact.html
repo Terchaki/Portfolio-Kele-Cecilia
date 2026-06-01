@@ -1,23 +1,53 @@
 <section class="contact panel" id="contato">
   <div class="contact__intro">
     <span class="section-label">Contato</span>
-    <h2>Canal aberto para networking, oportunidades e parcerias.</h2>
+    <h2>Vamos conversar sobre atendimento, pré-vendas e novas oportunidades.</h2>
     <p>
-      Os links abaixo podem ser mantidos como estão ou substituídos pelos contatos finais da Kele.
+      Este espaço foi desenhado para facilitar conexões com recrutadores, líderes e empresas que valorizam
+      relacionamento e performance.
     </p>
+
   </div>
 
   <div class="contact__list">
     @for (item of items; track item.label) {
-      <a
-        class="contact__item"
-        [href]="item.href"
-        [attr.target]="item.label === 'LinkedIn' ? '_blank' : null"
-        [attr.rel]="item.label === 'LinkedIn' ? 'noreferrer' : null"
-      >
-        <span>{{ item.label }}</span>
-        <strong>{{ item.value }}</strong>
-      </a>
+    <a class="contact__item" [href]="item.href" [attr.target]="item.label !== 'E-mail' ? '_blank' : null"
+      [attr.rel]="item.label !== 'E-mail' ? 'noopener noreferrer' : null">
+      <span class="contact__icon" aria-hidden="true">
+        @switch (item.label) {
+        @case ('LinkedIn') {
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.84-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.37V9h3.4v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31ZM5.35 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.58V9h3.54v11.45Z" />
+        </svg>
+        }
+        @case ('E-mail') {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+          <path d="M3 8l9 6 9-6"></path>
+        </svg>
+        }
+        @default {
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.52 3.48A11.78 11.78 0 0 0 12.08 0C5.5 0 .15 5.34.15 11.93c0 2.1.55 4.16 1.6 5.97L0 24l6.28-1.64a11.93 11.93 0 0 0 5.8 1.48h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.2-1.25-6.2-3.5-8.43Zm-8.44 18.35h-.01a9.92 9.92 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.24-.37a9.9 9.9 0 0 1-1.52-5.28c0-5.48 4.45-9.93 9.92-9.93 2.65 0 5.14 1.03 7.02 2.92a9.86 9.86 0 0 1 2.9 7.01c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.4c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.08-.3-.15-1.24-.46-2.36-1.47a8.72 8.72 0 0 1-1.63-2.03c-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.79.38-.27.3-1.03 1.01-1.03 2.46 0 1.45 1.05 2.84 1.2 3.04.15.2 2.05 3.12 4.97 4.38.7.3 1.24.48 1.66.61.7.22 1.33.19 1.83.11.56-.08 1.76-.72 2-1.4.25-.69.25-1.28.17-1.4-.07-.11-.27-.18-.57-.33Z" />
+        </svg>
+        }
+        }
+      </span>
+
+      <span class="contact__content">
+        <span class="text-label-contact">{{ item.label }}</span>
+        <!-- <strong>{{ item.value }}</strong> -->
+      </span>
+
+      <span class="contact__cta">Abrir</span>
+    </a>
     }
+  </div>
+  <div class="contact__note">
+    <strong>Pronto para oportunidades</strong>
+    <span>Atendimento consultivo, SDR e relacionamento comercial.</span>
   </div>
 </section>

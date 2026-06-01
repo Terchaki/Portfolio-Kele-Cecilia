@@ -9,6 +9,7 @@ export type JourneyItem = {
   title: string;
   context: string;
   description: string;
+  isCurrent?: boolean;
 };
 
 export type LearningItem = {

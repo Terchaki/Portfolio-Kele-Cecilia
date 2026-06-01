@@ -8,6 +8,15 @@ describe('App', () => {
     }).compileComponents();
   });
 
+  beforeEach(() => {
+    Object.defineProperty(window, 'innerWidth', {
+      configurable: true,
+      value: 1440,
+      writable: true
+    });
+    window.dispatchEvent(new Event('resize'));
+  });
+
   it('should create the app', () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
